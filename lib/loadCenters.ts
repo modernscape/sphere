@@ -2,7 +2,8 @@
 import {CenterData, CenterMap} from "../types/center"
 
 export async function loadCenters(): Promise<CenterMap> {
-  const res = await fetch("/data/data.json")
+  // const res = await fetch("/data/data.json")
+  const res = await fetch("/contents/sphere/data/data.json")
   const json = await res.json()
 
   const map: CenterMap = new Map()

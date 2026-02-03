@@ -8,7 +8,8 @@ import * as THREE from "three"
 import {applySoftMorph} from "../lib/applySoftMorph"
 
 export default function Model() {
-  const {scene} = useGLTF("/model/24-11-10_sphere.glb")
+  // const {scene} = useGLTF("/model/24-11-10_sphere.glb")
+  const {scene} = useGLTF("/contents/sphere/model/24-11-10_sphere.glb")
 
   const pressRef = useRef(false)
   const pressT = useRef(0)
