@@ -1,4 +1,5 @@
-import {CenterData, CenterMap} from "@/types/center"
+// import {CenterData, CenterMap} from "@/types/center"
+import {CenterData, CenterMap} from "../types/center"
 
 export async function loadCenters(): Promise<CenterMap> {
   const res = await fetch("/data/data.json")
