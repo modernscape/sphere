@@ -4,12 +4,10 @@ import {useGLTF} from "@react-three/drei"
 import {useFrame} from "@react-three/fiber"
 import {useRef, useEffect} from "react"
 import * as THREE from "three"
-// import {applySoftMorph} from "@/lib/applySoftMorph"
 import {applySoftMorph} from "../lib/applySoftMorph"
 
 export default function Model() {
-  // const {scene} = useGLTF("/model/24-11-10_sphere.glb")
-  const {scene} = useGLTF("/contents/sphere/model/24-11-10_sphere.glb")
+  const {scene} = useGLTF("/contents/sphere/model/24-11-15_torus2.glb")
 
   const pressRef = useRef(false)
   const pressT = useRef(0)
