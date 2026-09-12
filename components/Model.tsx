@@ -1,13 +1,13 @@
 "use client"
 
-import {useGLTF} from "@react-three/drei"
-import {useFrame} from "@react-three/fiber"
-import {useRef, useEffect} from "react"
+import { useGLTF } from "@react-three/drei"
+import { useFrame } from "@react-three/fiber"
+import { useRef, useEffect } from "react"
 import * as THREE from "three"
-import {applySoftMorph} from "../lib/applySoftMorph"
+import { applySoftMorph } from "../lib/applySoftMorph"
 
 export default function Model() {
-  const {scene} = useGLTF("/contents/sphere/model/24-11-15_torus2.glb")
+  const { scene } = useGLTF("/contents/sphere/model/24-11-15_torus2.glb")
 
   const pressRef = useRef(false)
   const pressT = useRef(0)
@@ -55,6 +55,7 @@ export default function Model() {
     const time = state.clock.elapsedTime
 
     for (const data of meshData.current) {
+      data.mesh.rotation.y += (Math.PI / 2) * dt * 0.2
       applySoftMorph({
         mesh: data.mesh,
         basePos: data.basePos,
