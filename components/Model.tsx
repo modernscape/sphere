@@ -55,7 +55,7 @@ export default function Model() {
     const time = state.clock.elapsedTime
 
     for (const data of meshData.current) {
-      data.mesh.rotation.y += (Math.PI / 2) * dt * 0.2
+      data.mesh.rotation.y += (Math.PI / 2) * dt * 0.3
       applySoftMorph({
         mesh: data.mesh,
         basePos: data.basePos,
